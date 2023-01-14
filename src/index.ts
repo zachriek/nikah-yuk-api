@@ -30,7 +30,6 @@ class App {
     this.app.use(bodyParser.urlencoded({ extended: true, limit: '30mb' }));
     this.app.use(compression());
     this.app.use(helmet());
-    this.app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }));
     this.app.use(cors());
   }
 
