@@ -29,7 +29,6 @@ class App {
         this.app.use(body_parser_1.default.urlencoded({ extended: true, limit: '30mb' }));
         this.app.use((0, compression_1.default)());
         this.app.use((0, helmet_1.default)());
-        this.app.use(helmet_1.default.crossOriginResourcePolicy({ policy: 'cross-origin' }));
         this.app.use((0, cors_1.default)());
     }
     routes() {
