@@ -12,6 +12,7 @@ import dbConnect from './config/dbConnect';
 // Routes
 import AuthRoutes from './routes/AuthRoutes';
 import InvitationRoutes from './routes/InvitationRoutes';
+import WishRoutes from './routes/WishRoutes';
 
 class App {
   public app: Application;
@@ -36,6 +37,7 @@ class App {
   protected routes(): void {
     this.app.use('/api/v1/auth', AuthRoutes);
     this.app.use('/api/v1/invitations', InvitationRoutes);
+    this.app.use('/api/v1/wishes', WishRoutes);
   }
 }
 

@@ -15,6 +15,7 @@ const dbConnect_1 = __importDefault(require("./config/dbConnect"));
 // Routes
 const AuthRoutes_1 = __importDefault(require("./routes/AuthRoutes"));
 const InvitationRoutes_1 = __importDefault(require("./routes/InvitationRoutes"));
+const WishRoutes_1 = __importDefault(require("./routes/WishRoutes"));
 class App {
     constructor() {
         this.app = (0, express_1.default)();
@@ -34,6 +35,7 @@ class App {
     routes() {
         this.app.use('/api/v1/auth', AuthRoutes_1.default);
         this.app.use('/api/v1/invitations', InvitationRoutes_1.default);
+        this.app.use('/api/v1/wishes', WishRoutes_1.default);
     }
 }
 const app = new App().app;
